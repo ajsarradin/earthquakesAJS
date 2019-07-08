@@ -1,5 +1,7 @@
 # earthquakesAJS
 
+[![Travis build status](https://travis-ci.org/ajsarradin/earthquakesAJS.svg?branch=master)](https://travis-ci.org/ajsarradin/earthquakesAJS)
+
 earthsquakesAJS provides several functions to read, clean, transform, and visualise earthquake data from NOAA's ["Significant Earthquake Database"](https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1) 
 National Geophysical Data Center / World Data Service (NGDC/WDS): Significant Earthquake Database. National Geophysical Data Center, NOAA. doi:10.7289/V5TD9V7K.
 
