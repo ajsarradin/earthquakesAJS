@@ -7,12 +7,21 @@
 eq_clean_data(data)
 }
 \arguments{
-\item{data}{A table downloaded with the \code{\link{eq_read_data}} function from the `earthquakesAJS`` package}
+\item{data}{A table with earthquake coordinates and dates that need to be cleaned}
 }
 \value{
 Returns a table with a "DATE" column of the Date class that indicates year, month and day of
 an earthquake occurence. Also converts "LONGITUDE" and "LATITUDE" columns to numeric class
 }
 \description{
-Function that reformats date & coordinates of NOAA earthquake data.
+Function that reformats date & coordinates of NOAA earthquake data. Assuming data was downloaded with
+the \code{\link{eq_read_data}} function of the `earthquakesAJS` package.
+}
+\examples{
+\dontrun{
+url<-"https://www.example-url.org"
+data<-eq_read_data(url)
+data<-eq_clean_data(data)
+}
+
 }

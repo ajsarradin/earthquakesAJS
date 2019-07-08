@@ -19,3 +19,13 @@ Function that adds additional information to popups creates with the \code{\link
 Function to be used with NOAA earthquake data downloaded and cleaned with the \code{\link{eq_read_data}} and
 \code{\link{eq_clean_data}} functions of the `earthquakesAJS`` package.
 }
+\examples{
+\dontrun{
+url<-"https://www.example-url.org"
+ds <- eq_location_clean(eq_clean_data(ds))
+dplyr::filter(ds, COUNTRY  \%in\% c("USA") & lubridate::year(DATE) >= 1960) \%>\%
+dplyr::mutate(popup_text = eq_create_label(.)) \%>\%
+eq_map(annot_col = "popup_text")
+}
+
+}

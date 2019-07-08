@@ -20,3 +20,13 @@ column of the utilised earthquake data.
 Function to be used with NOAA earthquake data downloaded and cleaned with the \code{\link{eq_read_data}} and
 \code{\link{eq_clean_data}} functions of the `earthquakesAJS`` package.
 }
+\examples{
+\dontrun{
+url<-"https://www.example-url.org"
+ds <- eq_location_clean(eq_clean_data(ds))
+ds \%>\%
+dplyr::filter(COUNTRY \%in\% c("FRANCE","GERMANY","ITALY") & lubridate::year(DATE) >= 1980) \%>\%,
+eq_map(annot_col = "DATE")
+}
+
+}

@@ -18,3 +18,10 @@ Function that reads a file from the National Geophysical Data Center
 World Data Service (NGDC/WDS): Significant Earthquake Database and converts it into a \code{tbl_df} table.
 Takes a URL link to the database as input.
 }
+\examples{
+\dontrun{
+url<-"https://www.example-url.org"
+eq_read_data(url)
+}
+
+}

@@ -3,7 +3,6 @@ Title: Reading, Cleaning, and Visualising Earthquake Data from NOAA
 Version: 0.1.0
 Authors@R: person("AJ", "Sarradin", email = "something@example.com", role = c("aut", "cre"))
 Description: This extension provides several functions to read, clean, transform, and visualise earthquake data from NOAA's "Significant Earthquake Database".
-Depends: R (>= 3.5.3)
 License: CC0
 Encoding: UTF-8
 LazyData: true
@@ -12,6 +11,7 @@ Imports: dplyr, magrittr, readr, lubridate, stringr, ggplot2, grid, leaflet
 Suggests: 
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    RCurl
 VignetteBuilder: knitr
 URL: https://github.com/ajsarradin/earthquakesAJS

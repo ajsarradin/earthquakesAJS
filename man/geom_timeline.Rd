@@ -40,3 +40,15 @@ victimes of earthquakes represented by points of different size and/or colour.
 Function to be used in a \code{\link{ggplot}} call to NOAA earthquake data downloaded and cleaned with the
 \code{\link{eq_read_data}} and \code{\link{eq_clean_data}} functions of the `earthquakesAJS`` package.
 }
+\examples{
+\dontrun{
+url<-"https://www.example-url.org"
+ds <- eq_location_clean(eq_clean_data(ds))
+aux<-dplyr::filter(ds, DATE >= "1980-01-01" & DATE <="2014-01-01" & COUNTRY == c("JAPAN","CHILE"))
+ggplot2::ggplot(aux) +
+geom_timeline(ggplot2::aes(x=DATE, y=COUNTRY, size=EQ_MAG_MB, colour=DEATHS)) +
+viridis::scale_colour_viridis(option="D") +
+ggplot2::theme_minimal()
+}
+
+}

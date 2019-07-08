@@ -6,10 +6,22 @@
 \usage{
 eq_location_clean(data)
 }
+\arguments{
+\item{data}{A table with earthquake location names that need to be cleaned}
+}
 \value{
 Returns a table with a cleaned "LOCATION_NAME" column where the country name has been stripped
 and location names have been converted to title case
 }
 \description{
-Function that reformats location names in NOAA earthquake data.
+Function that reformats location names in NOAA earthquake data. Assuming data was downloaded with the \code{\link{eq_read_data}}
+function of the `earthquakesAJS` package.
+}
+\examples{
+\dontrun{
+url<-"https://www.example-url.org"
+data<-eq_read_data(url)
+data<-eq_location_clean(data)
+}
+
 }
